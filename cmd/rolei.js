@@ -23,5 +23,5 @@ module.exports.run = async (client,M,args) => {
 }
 }
 module.exports.help = {
-    name: "اعضاء الرتبه"
+    name: "rolei"
 }
