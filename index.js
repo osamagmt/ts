@@ -22,7 +22,7 @@ client.on("ready", () => {
 
 client.on("ready", function() {
 
-    client.user.setGame("", `http://www.twitch.tv/osama_gmt`);
+    client.user.setGame("TS System", `http://www.twitch.tv/osama_gmt`);
 
 });
 
