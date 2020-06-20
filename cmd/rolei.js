@@ -13,7 +13,7 @@ module.exports.run = async (client,M,args) => {
 		.addField(`**لون الرتبه:**`, `${role.hexColor}`)
 		.addField(`**ايدي الرتبه:**`, `${role.id}`)
 		.addField(`**ترتيب الرتبه:**`, `${role.position}`)
-		.addField(`**اعضاء الرتبة :**`, `<@${role.members.map(m => m.id) > .join(` ,\n`)}`, true)
+		.addField(`**اعضاء الرتبة :**`, `<@${role.members.map(m => m.id).join > (` ,\n`)}`, true)
 		.addField(`**تاريخ انشاء الرتبه:**`, `${role.createdAt}`)
 		M.channel.send({embed: RichEmbed});
 	}
