@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports.run = async (client,M,args) => {
     if (M.member.hasPermission('MANAGE_MESSAGES')){
   let subtext = M.content.split(/\s+/g).slice(1).join(" ");
-	var role = M.guild.roles.find("name", subtext);
+    let role = M.mentions.roles.first();
 	if (role) {
 		var RichEmbed = new Discord.RichEmbed()
 		.setTitle(`Info Role : ${role.name}`)
