@@ -5,7 +5,7 @@ const prefix = "+";
 const fs = require("fs");
 
 client.on("ready", () => {
-  console.log("---------------------------------");
+  console.log("--------------------------------");
   console.log(`  # Bot Name:  ||   ${client.user.tag}`);
   console.log("---------------------------------");
   console.log(`  # Prefix:    ||   ${prefix}`);
