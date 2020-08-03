@@ -56,7 +56,46 @@ client.on("message", async message => {
 });
 
 
-
+client.on('guildMemberAdd', member => {
+let channel = member.guild.channels.get("736495323257765922");
+if (member.user.bot) return;
+var Canvas = require('canvas')
+var jimp = require('jimp')
+const w = ['./wel.png'];
+             let Image = Canvas.Image,
+                  canvas = new Canvas(557, 241),
+                  ctx = canvas.getContext('2d');
+              fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
+                  if (err) return console.log(err)
+                  let BG = Canvas.Image;
+                  let ground = new Image;
+                  ground.src = Background;
+                  ctx.drawImage(ground, 0, 0, 557, 241);
+      })
+      let url = member.user.displayAvatarURL.endsWith(".webp") ? member.user.displayAvatarURL.slice(5, -20) + ".gif" : member.user.displayAvatarURL;
+                      jimp.read(url, (err, ava) => {
+      if (err) return console.log(err);
+         ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
+      if (err) return console.log(err);
+            ctx.font = '25px Arial Bold';
+            ctx.fontSize = '15px';
+            ctx.fillStyle = "020202";
+            ctx.fillText(member.user.username, 245, 138);
+     //AVATARً
+     let Avatar = Canvas.Image;
+     let ava = new Avatar;
+         ava.src = buf;
+            ctx.beginPath();
+            ctx.arc(120.8, 120.5, 112.3, 0, Math.PI*2, true);
+            ctx.closePath();
+            ctx.clip();
+            ctx.drawImage(ava, 7, 8, 227, 225);
+            ctx.closePath();
+ channel.sendFile(canvas.toBuffer())
+     /* setTimeout(async function(){
+        channel.send(` \`Welcome To Ma Server \` ${member} `)
+      }, 2000);*/
+})})});
 
 //process.env.BOT_TOKEN
 
