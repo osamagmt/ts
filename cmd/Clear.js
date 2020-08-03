@@ -1,6 +1,5 @@
 module.exports.run = async (client,message,args) => {
 if (message.author.bot) return;
-if (message.content.startsWith(prefix + 'clear')) { 
     if(!message.channel.guild) return message.reply('⛔ | This Command For Servers Only!'); 
         if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('⛔ | You dont have **MANAGE_MESSAGES** Permission!');
         if(!message.guild.member(client.user).hasPermission('ADMINISTRATOR')) return message.channel.send('⛔ | I dont have **MANAGE_MESSAGES** Permission!');
@@ -14,7 +13,6 @@ if (message.content.startsWith(prefix + 'clear')) {
       .setDescription(`Cleared \`\`${args}\`\` messages.`);
     message.channel.send(embed).then(messages => messages.delete(5000));
   }
-})
 
 module.exports.help = {
     name: "clear"
