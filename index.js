@@ -21,7 +21,7 @@ client.on("ready", () => {
 
 client.on("ready", function() {
 
-    client.user.setGame("TS System", `http://www.twitch.tv/osama_gmt`);
+    client.user.setGame("Core.", `http://www.twitch.tv/osama_gmt`);
 
 });
 
@@ -101,5 +101,5 @@ const w = ['./wel.png'];
 
 
 
-client.login("NzIzNjc4MzU5MTY2NjQ4NDIy.Xu1KCg.tvQrwNcKnXu3tXu5RKz8FmJUvfw");
+client.login("NzM5OTU2NjU0ODc5MDE0OTUy.XyiAVg.FqKjxvOa1L7jPtqWYQ8KNmOQAFk");
 module.exports = client;
